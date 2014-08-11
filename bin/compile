@@ -78,7 +78,7 @@ fakechroot fakeroot chroot $BUILD_DIR/.root apt-get update >/dev/null 2>&1
 echo "packages updated" | indent
 
 echo "-----> Installing font packages"
-fakechroot fakeroot chroot $BUILD_DIR/.root apt-get -y install gawk ttf-dejavu ttf-droid xfonts-utils fontconfig >/dev/null 2>&1
+fakechroot fakeroot chroot $BUILD_DIR/.root apt-get -y install gawk ttf-dejavu ttf-droid xfonts-utils fontconfig mercurial >/dev/null 2>&1
 curl -o $BUILD_DIR/.root/tmp/fonts-stix.deb http://mirrors.kernel.org/ubuntu/pool/universe/f/fonts-stix/fonts-stix_1.1.0~beta1-2_all.deb >/dev/null 2>&1
 fakechroot fakeroot chroot $BUILD_DIR/.root dpkg -i /tmp/fonts-stix.deb >/dev/null 2>&1
 rm -f $BUILD_DIR/.root/tmp/*
